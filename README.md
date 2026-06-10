@@ -33,7 +33,6 @@ Empirical safety work combining interpretability, evaluation engineering, and in
 | Project | What it does |
 |---|---|
 | 🧠 **[ThoughtTrace](https://github.com/agentjakey/ThoughtTrace)** | Activation-level CoT faithfulness auditing. Residual-stream mean ablation + causal contribution scoring on Qwen2.5-7B. Key finding: output-*faithful* cases showed ~2× the activation shift of unfaithful ones - hidden influence invisible to output-level monitoring. |
-| 📊 **[EvalTrace](https://github.com/agentjakey/EvalTrace)** | Evaluation harness for measuring faithfulness and monitorability across reasoning models. |
 | 📖 **[cot-faithfulness](https://github.com/agentjakey/cot-faithfulness)** ([live](https://cot-faithfulness.vercel.app/)) | Interactive education site on when reasoning traces do and don't reflect real computation. |
 
 ### Mechanistic Interpretability & Probing
