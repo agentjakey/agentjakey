@@ -132,13 +132,4 @@ Production systems and infrastructure, with an emphasis on grounding, observabil
 ![Anthropic](https://img.shields.io/badge/Anthropic%20API-191919?style=for-the-badge&logoColor=white)
 ![OpenAI](https://img.shields.io/badge/OpenAI%20API-412991?style=for-the-badge&logo=openai&logoColor=white)
 
----
-
-## 📊 GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=agentjakey&show_icons=true&hide_border=true&count_private=true" height="165" alt="stats"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=agentjakey&layout=compact&hide_border=true" height="165" alt="top langs"/>
-</p>
-
 <p align="center"><i>Curiosity and connection, in this universe we all share.</i></p>
