@@ -54,7 +54,6 @@ Empirical safety work combining interpretability, evaluation engineering, and in
 | 🗺️ **[FailModeAtlas](https://github.com/agentjakey/FailModeAtlas)** ([live](https://failuremodeatlas.vercel.app/)) | Interactive map of 24 AI failure modes across 6 conceptual families. |
 | 🔁 **[recursive-rd-atlas](https://github.com/agentjakey/recursive-rd-atlas)** ([live](https://recursive-rd-atlas.vercel.app/)) | Interactive essay on recursive AI R&D safety concerns and oversight failure modes. |
 | 📚 **[epistemic-atlas](https://github.com/agentjakey/epistemic-atlas)** | Human-AI workflow for building trustworthy claim graphs from messy disputes. |
-| 🧰 **[inspect_evals](https://github.com/agentjakey/inspect_evals)** | Fork of UK AISI's Inspect evals - contributing eval implementations. |
 
 ---
 
