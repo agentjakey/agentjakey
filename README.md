@@ -1,4 +1,4 @@
-<h1 align="center">Hi, I'm Jacob Ortiz 👋</h1>
+<h1 align="center">Jacob Ortiz</h1>
 
 <p align="center">
   <b>Physics-trained ML researcher & AI engineer working toward technical AI safety.</b><br>
@@ -21,7 +21,7 @@ My path into safety ran through high-energy particle physics ML: as an ML Resear
 
 The problem I most want to work on: **whether chain-of-thought reasoning and model explanations are faithful enough to support oversight.** In parallel, I design and deploy production AI systems - RAG pipelines, evaluation harnesses, and full-stack ML tooling - with a focus on grounding, observability, and systems people can actually inspect.
 
-> 📍 Currently: extending **ThoughtTrace** into a multi-model CoT faithfulness benchmark · ML Engineering intern @ Experian · writing **[Latent Space](https://agentjakey.substack.com/)** weekly
+> Currently: extending **ThoughtTrace** into a multi-model CoT faithfulness benchmark · ML Engineering intern @ Experian · writing **[Latent Space](https://agentjakey.substack.com/)** weekly
 
 ---
 
