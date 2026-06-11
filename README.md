@@ -13,7 +13,7 @@
 
 ---
 
-## 💫 About
+## About
 
 I'm a graduated **Physics BS** student from **UC San Diego**, working at the intersection of physics, machine learning, and AI safety.
 
@@ -25,72 +25,72 @@ The problem I most want to work on: **whether chain-of-thought reasoning and mod
 
 ---
 
-## 🔬 AI Safety & Interpretability
+## AI Safety & Interpretability
 
 Empirical safety work combining interpretability, evaluation engineering, and inspectable tooling.
 
 ### Chain-of-Thought Faithfulness & Monitoring
 | Project | What it does |
 |---|---|
-| 🧠 **[ThoughtTrace](https://github.com/agentjakey/ThoughtTrace)** | Activation-level CoT faithfulness auditing. Residual-stream mean ablation + causal contribution scoring on Qwen2.5-7B. Key finding: output-*faithful* cases showed ~2× the activation shift of unfaithful ones - hidden influence invisible to output-level monitoring. |
-| 📖 **[cot-faithfulness](https://github.com/agentjakey/cot-faithfulness)** ([live](https://cot-faithfulness.vercel.app/)) | Interactive education site on when reasoning traces do and don't reflect real computation. |
+| **[ThoughtTrace](https://github.com/agentjakey/ThoughtTrace)** | Activation-level CoT faithfulness auditing. Residual-stream mean ablation + causal contribution scoring on Qwen2.5-7B. Key finding: output-*faithful* cases showed ~2× the activation shift of unfaithful ones - hidden influence invisible to output-level monitoring. |
+| **[cot-faithfulness](https://github.com/agentjakey/cot-faithfulness)** ([live](https://cot-faithfulness.vercel.app/)) | Interactive education site on when reasoning traces do and don't reflect real computation. |
 
 ### Mechanistic Interpretability & Probing
 | Project | What it does |
 |---|---|
-| 🖐️ **[SignBridge](https://github.com/agentjakey/SignBridge)** | Probes LLaVA-1.5-7B decoder layers for ASL hand-shape structure; logistic probes hit 81.7% at layer 16 (vs 5% chance), surfacing latent structure absent from generated text. |
-| 🧬 **[EmbeddingDrift](https://github.com/agentjakey/EmbeddingDrift)** | Concept-representation drift across Llama variants. Instruction tuning produces ~7.5× more embedding displacement than 4-bit quantization; demographic concepts over-represented among top drifters. |
-| ⚡ **[mechinterp-explore](https://github.com/agentjakey/mechinterp-explore)** | Canonical GPT-2 Small circuit analysis with TransformerLens: induction heads, logit lens, activation patching on IOI, direct logit attribution. |
-| 🔵 **[neural-polysemanticity](https://github.com/agentjakey/neural-polysemanticity)** ([live](https://neural-polysemanticity.vercel.app/)) | Interactive lab on how single neurons encode multiple concepts and why it complicates auditing. |
-| 🌐 **[RepOverLab](https://github.com/agentjakey/RepOverLab)** ([live](https://representation-overlap-lab.vercel.app/)) | Visualizes how embedding-based safety classifiers inherit ambiguity from representation geometry. |
+| **[SignBridge](https://github.com/agentjakey/SignBridge)** | Probes LLaVA-1.5-7B decoder layers for ASL hand-shape structure; logistic probes hit 81.7% at layer 16 (vs 5% chance), surfacing latent structure absent from generated text. |
+| **[EmbeddingDrift](https://github.com/agentjakey/EmbeddingDrift)** | Concept-representation drift across Llama variants. Instruction tuning produces ~7.5× more embedding displacement than 4-bit quantization; demographic concepts over-represented among top drifters. |
+| **[mechinterp-explore](https://github.com/agentjakey/mechinterp-explore)** | Canonical GPT-2 Small circuit analysis with TransformerLens: induction heads, logit lens, activation patching on IOI, direct logit attribution. |
+| **[neural-polysemanticity](https://github.com/agentjakey/neural-polysemanticity)** ([live](https://neural-polysemanticity.vercel.app/)) | Interactive lab on how single neurons encode multiple concepts and why it complicates auditing. |
+| **[RepOverLab](https://github.com/agentjakey/RepOverLab)** ([live](https://representation-overlap-lab.vercel.app/)) | Visualizes how embedding-based safety classifiers inherit ambiguity from representation geometry. |
 
 ### Evaluation, Monitoring & Failure Modes
 | Project | What it does |
 |---|---|
-| 🔍 **[VeritasLens](https://github.com/agentjakey/VeritasLens)** | Claim-level hallucination detection: QLoRA-tuned Gemma, three-tier evidence retrieval, deterministic reliability scoring, causal-mediation token attribution. Held-out accuracy 50% → 90%. |
-| 🧪 **[PromptSurgeon](https://github.com/agentjakey/PromptSurgeon)** | 800-trial controlled study of prompt strategies in agentic systems, with power analysis, bootstrap CIs, and cost measurement. |
-| 🎭 **[DeceptionScope](https://github.com/agentjakey/DeceptionScope)** | Model-organisms-of-misalignment tooling for studying deceptive behavior. |
-| 🎯 **[AlignmentLens](https://github.com/agentjakey/AlignmentLens)** ([live](https://alignmentlens-production.up.railway.app/)) | Live reward-hacking demo - watch it happen, then probe why. |
-| 🗺️ **[FailModeAtlas](https://github.com/agentjakey/FailModeAtlas)** ([live](https://failuremodeatlas.vercel.app/)) | Interactive map of 24 AI failure modes across 6 conceptual families. |
-| 🔁 **[recursive-rd-atlas](https://github.com/agentjakey/recursive-rd-atlas)** ([live](https://recursive-rd-atlas.vercel.app/)) | Interactive essay on recursive AI R&D safety concerns and oversight failure modes. |
-| 📚 **[epistemic-atlas](https://github.com/agentjakey/epistemic-atlas)** | Human-AI workflow for building trustworthy claim graphs from messy disputes. |
+| **[VeritasLens](https://github.com/agentjakey/VeritasLens)** | Claim-level hallucination detection: QLoRA-tuned Gemma, three-tier evidence retrieval, deterministic reliability scoring, causal-mediation token attribution. Held-out accuracy 50% → 90%. |
+| **[PromptSurgeon](https://github.com/agentjakey/PromptSurgeon)** | 800-trial controlled study of prompt strategies in agentic systems, with power analysis, bootstrap CIs, and cost measurement. |
+| **[DeceptionScope](https://github.com/agentjakey/DeceptionScope)** | Model-organisms-of-misalignment tooling for studying deceptive behavior. |
+| **[AlignmentLens](https://github.com/agentjakey/AlignmentLens)** ([live](https://alignmentlens-production.up.railway.app/)) | Live reward-hacking demo - watch it happen, then probe why. |
+| **[FailModeAtlas](https://github.com/agentjakey/FailModeAtlas)** ([live](https://failuremodeatlas.vercel.app/)) | Interactive map of 24 AI failure modes across 6 conceptual families. |
+| **[recursive-rd-atlas](https://github.com/agentjakey/recursive-rd-atlas)** ([live](https://recursive-rd-atlas.vercel.app/)) | Interactive essay on recursive AI R&D safety concerns and oversight failure modes. |
+| **[epistemic-atlas](https://github.com/agentjakey/epistemic-atlas)** | Human-AI workflow for building trustworthy claim graphs from messy disputes. |
 
 ---
 
-## 🛠️ AI / ML Engineering
+## AI / ML Engineering
 
 Production systems and infrastructure, with an emphasis on grounding, observability, and reliability.
 
 | Project | What it does |
 |---|---|
-| 📚 **[RAG-Snowflake-Policy-Assistant](https://github.com/agentjakey/RAG-Snowflake-Policy-Assistant)** | Enterprise RAG on Snowflake Cortex: PDF ingestion, recursive chunking, semantic retrieval, source-cited generation, Streamlit UI built around zero-hallucination constraints. |
-| 🤖 **[Trace-Forge](https://github.com/agentjakey/Trace-Forge)** | Framework-agnostic observability for multi-step LLM pipelines: nested trace capture, token/cost attribution, waterfall UI, replay, OpenTelemetry-style export. |
-| 💳 **[credit-risk-threshold-lab](https://github.com/agentjakey/credit-risk-threshold-lab)** | Binary credit-risk classification (logistic regression vs XGBoost) framed around the business decision, not just accuracy. |
+| **[RAG-Snowflake-Policy-Assistant](https://github.com/agentjakey/RAG-Snowflake-Policy-Assistant)** | Enterprise RAG on Snowflake Cortex: PDF ingestion, recursive chunking, semantic retrieval, source-cited generation, Streamlit UI built around zero-hallucination constraints. |
+| **[Trace-Forge](https://github.com/agentjakey/Trace-Forge)** | Framework-agnostic observability for multi-step LLM pipelines: nested trace capture, token/cost attribution, waterfall UI, replay, OpenTelemetry-style export. |
+| **[credit-risk-threshold-lab](https://github.com/agentjakey/credit-risk-threshold-lab)** | Binary credit-risk classification (logistic regression vs XGBoost) framed around the business decision, not just accuracy. |
 
 > Additional production work (not all public): RAG and automation systems at **American Refrigeration** - internal knowledge retrieval, role-gated workflow platforms, and AI evaluations adopted by leadership.
 
 ---
 
-## 🧮 Physics & Scientific ML
+## Physics & Scientific ML
 
 | Project | What it does |
 |---|---|
-| ⚛️ **[SAL-T4HEP](https://github.com/agentjakey/SAL-T4HEP)** | Efficient transformer architecture for particle identification - code accompanying the NeurIPS 2025 ML4PS paper ([arXiv:2512.00210](https://arxiv.org/abs/2512.00210)). |
-| 🌀 **[miet-clifford](https://github.com/agentjakey/miet-clifford)** | Measurement-induced entanglement phase transitions in 1D random Clifford circuits: stabilizer tableau simulation, GF(2) entropy, finite-size scaling. |
-| 🩺 **[Phys_139_project](https://github.com/agentjakey/Phys_139_project)** | Custom lightweight CNN for medical image classification - 5× fewer params than EfficientNetV2-S with higher accuracy and AUC. |
-| 📻 **[Arduino-FM-Radio-Transmitter](https://github.com/agentjakey/Arduino-FM-Radio-Transmitter)** | SI4713-based FM transmitter with auto band scanning, live tuning, and switchable audio input. |
+| **[SAL-T4HEP](https://github.com/agentjakey/SAL-T4HEP)** | Efficient transformer architecture for particle identification - code accompanying the NeurIPS 2025 ML4PS paper ([arXiv:2512.00210](https://arxiv.org/abs/2512.00210)). |
+| **[miet-clifford](https://github.com/agentjakey/miet-clifford)** | Measurement-induced entanglement phase transitions in 1D random Clifford circuits: stabilizer tableau simulation, GF(2) entropy, finite-size scaling. |
+| **[Phys_139_project](https://github.com/agentjakey/Phys_139_project)** | Custom lightweight CNN for medical image classification - 5× fewer params than EfficientNetV2-S with higher accuracy and AUC. |
+| **[Arduino-FM-Radio-Transmitter](https://github.com/agentjakey/Arduino-FM-Radio-Transmitter)** | SI4713-based FM transmitter with auto band scanning, live tuning, and switchable audio input. |
 
 ---
 
-## ✍️ Writing & Community
+## Writing & Community
 
-- 📰 **[Latent Space](https://agentjakey.substack.com/)** - weekly Substack making technical AI safety ideas accessible without oversimplifying.
-- 👥 **UCSD ML / AI / AI Safety Learning Group** - organizer, 50+ students.
-- 🎓 **BlueDot Impact** - Technical AI Safety certificate.
+- **[Latent Space](https://agentjakey.substack.com/)** - weekly Substack making technical AI safety ideas accessible without oversimplifying.
+- **UCSD ML / AI / AI Safety Learning Group** - organizer, 50+ students.
+- **BlueDot Impact** - Technical AI Safety certificate.
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 **Research / Interpretability**
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
