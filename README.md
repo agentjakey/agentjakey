@@ -1,8 +1,9 @@
+
 <h1 align="center">Jacob Ortiz</h1>
 
 <p align="center">
-  <b>Physics-trained ML researcher & AI engineer working toward technical AI safety.</b><br>
-  Mechanistic interpretability · Chain-of-thought faithfulness · Model evaluation · AI observability
+  <b>AI Safety Researcher & ML Engineer | Physics, UC San Diego</b><br>
+  Mechanistic Interpretability · Chain-of-Thought Faithfulness · Model Evaluation · Agent Reliability
 </p>
 
 <p align="center">
@@ -15,13 +16,17 @@
 
 ## About
 
-I'm a graduated **Physics BS** student from **UC San Diego**, working at the intersection of physics, machine learning, and AI safety.
+I'm a **Physics BS graduate from UC San Diego**, working on technical AI safety, model evaluation, and reliable AI systems.
 
-My path into safety ran through high-energy particle physics ML: as an ML Research Assistant in the **UCSD Duarte Lab**, I co-authored a **NeurIPS 2025 ML4PS** paper on why Particle Transformer attention becomes sparse ([arXiv:2512.00210](https://arxiv.org/abs/2512.00210)). That work made me ask a broader safety question - *when a model exposes something interpretable-looking (attention, reasoning traces, citations), how do we know it's actually causally connected to the computation driving behavior?*
+My path into AI safety started in high-energy physics ML. As an ML Research Assistant in the **UCSD Duarte Lab**, I co-authored a **NeurIPS 2025 ML4PS** workshop paper investigating why attention becomes sparse in Particle Transformers ([arXiv:2512.00210](https://arxiv.org/abs/2512.00210)). That research got me interested in a broader question: *when a model produces something interpretable-looking, whether an attention pattern, reasoning trace, or citation, how do we know it reflects the computation actually driving its behavior?*
 
-The problem I most want to work on: **whether chain-of-thought reasoning and model explanations are faithful enough to support oversight.** In parallel, I design and deploy production AI systems - RAG pipelines, evaluation harnesses, and full-stack ML tooling - with a focus on grounding, observability, and systems people can actually inspect.
+My research focuses on **chain-of-thought faithfulness, causal interpretability, evaluation design, and model behavior under oversight**. I care about designing experiments that distinguish meaningful evidence from convincing-looking explanations.
 
-> Currently: extending **ThoughtTrace** into a multi-model CoT faithfulness benchmark · ML Engineering intern @ Experian · writing **[Latent Space](https://agentjakey.substack.com/)** weekly
+Alongside research, I build production AI systems. At **Experian**, I work on agent trust infrastructure for identity, delegated authority, and agentic commerce. At **American Refrigeration**, I've developed AI-powered workflows and internal engineering tools.
+
+I'm especially interested in the gap between how AI systems behave under evaluation and what happens when they're deployed with real tools, permissions, and responsibilities.
+
+> **Current focus:** Empirical AI safety research · Agent reliability and trust · Building inspectable AI systems · Writing [Latent Space](https://agentjakey.substack.com/)
 
 ---
 
@@ -29,31 +34,46 @@ The problem I most want to work on: **whether chain-of-thought reasoning and mod
 
 Empirical safety work combining interpretability, evaluation engineering, and inspectable tooling.
 
-### Chain-of-Thought Faithfulness & Monitoring
+### Causal Evaluation & Chain-of-Thought Monitoring
+
 | Project | What it does |
 |---|---|
-| **[ThoughtTrace](https://github.com/agentjakey/ThoughtTrace)** | Activation-level CoT faithfulness auditing. Residual-stream mean ablation + causal contribution scoring on Qwen2.5-7B. Key finding: output-*faithful* cases showed ~2× the activation shift of unfaithful ones - hidden influence invisible to output-level monitoring. |
-| **[cot-faithfulness](https://github.com/agentjakey/cot-faithfulness)** ([live](https://cot-faithfulness.vercel.app/)) | Interactive education site on when reasoning traces do and don't reflect real computation. |
+| **[Causal Self-Forecasting](https://github.com/agentjakey/causal-self-forecasting)** | Reproducible benchmark testing whether a model's hidden state improves forecasts of how activation interventions change its outputs. Uses precommitted predictions, held-out evaluation, calibration, and wrong-state controls. The initial Gemma-3-1B experiment found no detectable improvement from true-state access under the tested setup. |
+| **[ThoughtTrace](https://github.com/agentjakey/ThoughtTrace)** | Activation-level study of CoT faithfulness using residual-stream ablations and bias probes on Qwen2.5-7B. Investigates hidden activation shifts when prompted reasoning does not disclose an injected hint, with documented limitations and negative results for unreliable faithfulness proxies. |
+| **[CoT Faithfulness Lab](https://github.com/agentjakey/cot-faithfulness)** ([live](https://cot-faithfulness.vercel.app/)) | Interactive education site on reasoning faithfulness, causal interventions, and why visible reasoning may not faithfully describe a model's internal computation. |
 
 ### Mechanistic Interpretability & Probing
+
 | Project | What it does |
 |---|---|
-| **[SignBridge](https://github.com/agentjakey/SignBridge)** | Probes LLaVA-1.5-7B decoder layers for ASL hand-shape structure; logistic probes hit 81.7% at layer 16 (vs 5% chance), surfacing latent structure absent from generated text. |
-| **[EmbeddingDrift](https://github.com/agentjakey/EmbeddingDrift)** | Concept-representation drift across Llama variants. Instruction tuning produces ~7.5× more embedding displacement than 4-bit quantization; demographic concepts over-represented among top drifters. |
-| **[mechinterp-explore](https://github.com/agentjakey/mechinterp-explore)** | Canonical GPT-2 Small circuit analysis with TransformerLens: induction heads, logit lens, activation patching on IOI, direct logit attribution. |
+| **[SignBridge](https://github.com/agentjakey/SignBridge)** | Probes LLaVA-1.5-7B decoder layers for ASL hand-shape structure; logistic probes hit 81.7% at layer 16 (vs. 5% chance), surfacing latent structure absent from generated text. |
+| **[EmbeddingDrift](https://github.com/agentjakey/EmbeddingDrift)** | Concept-representation drift across Llama variants. Instruction tuning produces ~7.5× more embedding displacement than 4-bit quantization; demographic concepts are over-represented among top drifters. |
+| **[mechinterp-explore](https://github.com/agentjakey/mechinterp-explore)** | GPT-2 Small circuit analysis with TransformerLens: induction heads, logit lens, activation patching on IOI, and direct logit attribution. |
 | **[neural-polysemanticity](https://github.com/agentjakey/neural-polysemanticity)** ([live](https://neural-polysemanticity.vercel.app/)) | Interactive lab on how single neurons encode multiple concepts and why it complicates auditing. |
 | **[RepOverLab](https://github.com/agentjakey/RepOverLab)** ([live](https://representation-overlap-lab.vercel.app/)) | Visualizes how embedding-based safety classifiers inherit ambiguity from representation geometry. |
+| **[Rogue Feature Geometry](https://github.com/agentjakey/rogue-feature-geometry)** | BlueDot technical AI safety investigation of nonlinear feature representations. A linear probe was near chance on the hidden country feature (AUC 0.487), while a quadratic probe recovered it (AUC 0.992), demonstrating a concrete limitation of linear probing. |
 
 ### Evaluation, Monitoring & Failure Modes
+
 | Project | What it does |
 |---|---|
-| **[VeritasLens](https://github.com/agentjakey/VeritasLens)** | Claim-level hallucination detection: QLoRA-tuned Gemma, three-tier evidence retrieval, deterministic reliability scoring, causal-mediation token attribution. Held-out accuracy 50% → 90%. |
-| **[PromptSurgeon](https://github.com/agentjakey/PromptSurgeon)** | 800-trial controlled study of prompt strategies in agentic systems, with power analysis, bootstrap CIs, and cost measurement. |
+| **[VeritasLens](https://github.com/agentjakey/VeritasLens)** | Claim-level hallucination detection: QLoRA-tuned Gemma, three-tier evidence retrieval, deterministic reliability scoring, and causal-mediation token attribution. Held-out accuracy improved from 50% to 90% in the reported experiment. |
+| **[PromptSurgeon](https://github.com/agentjakey/PromptSurgeon)** | 800-trial controlled study of prompt strategies in agentic systems, with power analysis, bootstrap confidence intervals, and cost measurement. |
 | **[DeceptionScope](https://github.com/agentjakey/DeceptionScope)** | Model-organisms-of-misalignment tooling for studying deceptive behavior. |
-| **[AlignmentLens](https://github.com/agentjakey/AlignmentLens)** ([live](https://alignmentlens-production.up.railway.app/)) | Live reward-hacking demo - watch it happen, then probe why. |
+| **[AlignmentLens](https://github.com/agentjakey/AlignmentLens)** ([live](https://alignmentlens-production.up.railway.app/)) | Live reward-hacking demonstration showing how optimization can produce unintended behavior, with tools to investigate why. |
 | **[FailModeAtlas](https://github.com/agentjakey/FailModeAtlas)** ([live](https://failuremodeatlas.vercel.app/)) | Interactive map of 24 AI failure modes across 6 conceptual families. |
-| **[recursive-rd-atlas](https://github.com/agentjakey/recursive-rd-atlas)** ([live](https://recursive-rd-atlas.vercel.app/)) | Interactive essay on recursive AI R&D safety concerns and oversight failure modes. |
-| **[epistemic-atlas](https://github.com/agentjakey/epistemic-atlas)** | Human-AI workflow for building trustworthy claim graphs from messy disputes. |
+| **[recursive-rd-atlas](https://github.com/agentjakey/recursive-rd-atlas)** ([live](https://recursive-rd-atlas.vercel.app/)) | Interactive atlas of AI-driven AI R&D, recursive self-improvement warning signs, bottlenecks, and oversight failure modes. |
+
+---
+
+## Evidence, Provenance & Trustworthy AI
+
+Systems for making AI-generated claims inspectable, tracing them back to their sources, and surfacing uncertainty when evidence is insufficient.
+
+| Project | What it does |
+|---|---|
+| **[The Archive Argues With Itself](https://github.com/agentjakey/archive-argues-with-itself)** ([live](https://archive-argues-with-itself-production.up.railway.app/)) | Open-source civic memory debugger developed through the BC + AI × Internet Archive Canada fellowship. Searches scanned Canadian government public-health records, compares language across decades, links claims to source pages, and exposes missing evidence. Includes reproducible evaluation and citation-support auditing. |
+| **[Epistemic Atlas](https://github.com/agentjakey/epistemic-atlas)** ([live](https://epistemic-atlas.vercel.app/)) | Human-AI workflow for converting complex disputes into structured claim graphs with source provenance, cruxes, missing evidence, and uncertainty. Includes a JSON schema, inspectable interface, worked examples, and controlled compute-scaling experiments. |
 
 ---
 
@@ -63,29 +83,50 @@ Production systems and infrastructure, with an emphasis on grounding, observabil
 
 | Project | What it does |
 |---|---|
-| **[RAG-Snowflake-Policy-Assistant](https://github.com/agentjakey/RAG-Snowflake-Policy-Assistant)** | Enterprise RAG on Snowflake Cortex: PDF ingestion, recursive chunking, semantic retrieval, source-cited generation, Streamlit UI built around zero-hallucination constraints. |
-| **[Trace-Forge](https://github.com/agentjakey/Trace-Forge)** | Framework-agnostic observability for multi-step LLM pipelines: nested trace capture, token/cost attribution, waterfall UI, replay, OpenTelemetry-style export. |
-| **[credit-risk-threshold-lab](https://github.com/agentjakey/credit-risk-threshold-lab)** | Binary credit-risk classification (logistic regression vs XGBoost) framed around the business decision, not just accuracy. |
+| **[RAG-Snowflake-Policy-Assistant](https://github.com/agentjakey/RAG-Snowflake-Policy-Assistant)** | Enterprise RAG on Snowflake Cortex: PDF ingestion, recursive chunking, semantic retrieval, source-cited generation, and a Streamlit UI built around grounding and hallucination reduction. |
+| **[Trace-Forge](https://github.com/agentjakey/Trace-Forge)** | Framework-agnostic observability for multi-step LLM pipelines: nested trace capture, token/cost attribution, waterfall UI, replay, and OpenTelemetry-style export. |
+| **[credit-risk-threshold-lab](https://github.com/agentjakey/credit-risk-threshold-lab)** | Binary credit-risk classification (logistic regression vs. XGBoost) framed around the business decision, rather than model accuracy alone. |
 
-> Additional production work (not all public): RAG and automation systems at **American Refrigeration** - internal knowledge retrieval, role-gated workflow platforms, and AI evaluations adopted by leadership.
+---
+
+## Applied AI Engineering
+
+I also build AI systems used beyond research environments. Some of this work lives in private company repositories.
+
+**Experian | Machine Learning Engineering Intern — Agent Trust**
+
+Building agent trust infrastructure for agentic commerce, including agent identity, delegated permissions, and trust verification. My work has involved integrating trust checks into a shopping agent using the OpenAI Apps SDK and MCP, with an emphasis on making autonomous transactions more accountable.
+
+**American Refrigeration | AI Engineer**
+
+Developed internal AI tools and workflow platforms for industrial operations, including BidDesk, a React/TypeScript/Supabase application supporting bid management and coordination. Focused on reducing manual work, improving operational visibility, and making internal knowledge more accessible.
+
+**Youth for Responsible AI | Technical Fellow**
+
+Developed and deployed tooling for an AI literacy initiative, including a public educational website, structured incident content, and an interactive resource kit. Implemented a Cloudflare Worker and D1-backed signup and access workflow with server-side validation, with deployment handoff documented for the organization.
+
+These experiences reinforce a question that also drives my research: how do we make AI systems reliable and accountable when they operate with real data, tools, and permissions?
 
 ---
 
 ## Physics & Scientific ML
 
+**Publication:** [Why Is Attention Sparse In Particle Transformer?](https://arxiv.org/abs/2512.00210) — Co-author, Machine Learning and the Physical Sciences Workshop, NeurIPS 2025. Investigates sparse attention in particle-jet transformers and its relationship to learned physical features.
+
 | Project | What it does |
 |---|---|
-| **[SAL-T4HEP](https://github.com/agentjakey/SAL-T4HEP)** | Efficient transformer architecture for particle identification - code accompanying the NeurIPS 2025 ML4PS paper ([arXiv:2512.00210](https://arxiv.org/abs/2512.00210)). |
-| **[miet-clifford](https://github.com/agentjakey/miet-clifford)** | Measurement-induced entanglement phase transitions in 1D random Clifford circuits: stabilizer tableau simulation, GF(2) entropy, finite-size scaling. |
-| **[Phys_139_project](https://github.com/agentjakey/Phys_139_project)** | Custom lightweight CNN for medical image classification - 5× fewer params than EfficientNetV2-S with higher accuracy and AUC. |
-| **[Arduino-FM-Radio-Transmitter](https://github.com/agentjakey/Arduino-FM-Radio-Transmitter)** | SI4713-based FM transmitter with auto band scanning, live tuning, and switchable audio input. |
+| **[SAL-T4HEP](https://github.com/agentjakey/SAL-T4HEP)** | Collaborative research code for efficient transformer-based particle jet tagging. My research branch explored synthesized attention maps, particle-ordering strategies, and architecture variants. Built on a shared research repository. |
+| **[miet-clifford](https://github.com/agentjakey/miet-clifford)** | Measurement-induced entanglement phase transitions in 1D random Clifford circuits: stabilizer tableau simulation, GF(2) entropy, and finite-size scaling. |
+| **[Phys_139_project](https://github.com/agentjakey/Phys_139_project)** | Custom lightweight CNN for medical image classification, reporting 5× fewer parameters than EfficientNetV2-S with higher accuracy and AUC in the project evaluation. |
+| **[Arduino-FM-Radio-Transmitter](https://github.com/agentjakey/Arduino-FM-Radio-Transmitter)** | SI4713-based FM transmitter with automatic band scanning, live tuning, and switchable microphone or laptop audio input. |
 
 ---
 
 ## Writing & Community
 
-- **[Latent Space](https://agentjakey.substack.com/)** - weekly Substack making technical AI safety ideas accessible without oversimplifying.
-- **UCSD ML / AI / AI Safety Learning Group** - organizer, 50+ students.
+- **[Latent Space](https://agentjakey.substack.com/)** - Writing about technical AI safety, interpretability, and model behavior.
+- **[Weights & Biases Lab](https://github.com/agentjakey/WeightsBiasesLab)** ([live](https://weights-biases-lab.vercel.app/)) - Interactive neural-network teaching lab covering forward passes, training, decision boundaries, activation functions, model capacity, and overfitting.
+- **UCSD ML / AI / AI Safety Learning Group** - Organizer, 50+ students.
 - **BlueDot Impact** - Technical AI Safety certificate.
 
 ---
@@ -93,6 +134,7 @@ Production systems and infrastructure, with an emphasis on grounding, observabil
 ## Tech Stack
 
 **Research / Interpretability**
+
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
 ![TransformerLens](https://img.shields.io/badge/TransformerLens-1a1a1a?style=for-the-badge&logoColor=white)
 ![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
@@ -103,6 +145,7 @@ Production systems and infrastructure, with an emphasis on grounding, observabil
 ![Inspect](https://img.shields.io/badge/Inspect%20AI-004080?style=for-the-badge&logoColor=white)
 
 **Languages**
+
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
@@ -112,6 +155,7 @@ Production systems and infrastructure, with an emphasis on grounding, observabil
 ![LaTeX](https://img.shields.io/badge/LaTeX-008080?style=for-the-badge&logo=latex&logoColor=white)
 
 **ML Infra & Tooling**
+
 ![CUDA](https://img.shields.io/badge/cuda-000000.svg?style=for-the-badge&logo=nVIDIA&logoColor=green)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 ![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)
@@ -122,6 +166,7 @@ Production systems and infrastructure, with an emphasis on grounding, observabil
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 
 **Apps, APIs & Deployment**
+
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
 ![Streamlit](https://img.shields.io/badge/Streamlit-%23FE4B4B.svg?style=for-the-badge&logo=streamlit&logoColor=white)
 ![Gradio](https://img.shields.io/badge/Gradio-F97316?style=for-the-badge&logoColor=white)
